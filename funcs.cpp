@@ -90,3 +90,27 @@ bool isAlphanumeric(std::string s)
         }
     }
 }
+
+bool nestedParens(std::string s)
+{
+    if (s.length() == 0) // if the length of the string is 0.
+    {
+        return true; // return true.
+    }
+    else if (s.length() == 1) // if the length of the string is 1.
+    {
+        return false; // return false.
+    }
+    else
+    {
+        // recursively write a solution without using for or while loops.
+        if (s[0] == '(' && s[s.length() - 1] == ')') // if the first character of the string is a left parenthesis and the last character of the string is a right parenthesis.
+        {
+            return nestedParens(s.substr(1, s.length() - 2)); // return the result of recursively calling the function again with the first and last characters of the string removed.
+        }
+        else
+        {
+            return false; // return false.
+        }
+    }
+}

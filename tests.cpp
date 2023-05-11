@@ -41,3 +41,13 @@ TEST_CASE("Task D: isAlphanumeric")
     CHECK(isAlphanumeric("ABCDabcd ") == false);
     CHECK(isAlphanumeric("ABCDabcd!") == false);
 }
+
+TEST_CASE("Task E: nestedParens")
+{
+    CHECK(nestedParens("((()))") == true);
+    CHECK(nestedParens("()") == true);
+    CHECK(nestedParens("(((") == false);
+    CHECK(nestedParens("(()") == false);
+    CHECK(nestedParens(")(") == false);
+    CHECK(nestedParens("") == true);
+}

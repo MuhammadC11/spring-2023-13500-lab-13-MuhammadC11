@@ -40,5 +40,15 @@ int main()
     std::cout << "Testing isAlphanumeric(\"KLMN 8-7-6\"):\n";
     std::cout << isAlphanumeric("KLMN 8-7-6") << "\n";
 
-    return 0;
+    std::cout << "\nTask E: \n";
+    std::cout << "Testing nestedParens(\"((()))\"):\n";
+    std::cout << nestedParens("((()))") << "\n";
+    std::cout << "Testing nestedParens(\"()\"):\n";
+    std::cout << nestedParens("()") << "\n";
+    std::cout << "Testing nestedParens(\"((\"):\n";
+    std::cout << nestedParens("((") << "\n";
+    std::cout << "Testing nestedParens(\"\"):\n";
+    std::cout << nestedParens("") << "\n";
+
+       return 0;
 }
